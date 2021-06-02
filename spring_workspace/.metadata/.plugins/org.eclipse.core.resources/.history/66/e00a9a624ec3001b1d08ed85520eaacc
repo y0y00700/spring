@@ -1,0 +1,15 @@
+package org.zerock.persistence;
+
+import org.junit.runner.RunWith;
+import org.zerock.mapper.TimeMapper;
+
+import lombok.Setter;
+
+@RunWith(SpringRunner.class)
+@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
+public class TimeMapperTests {
+
+	@Setter(onMethod_= @Autowired)
+	private TimeMapper timeMapper; //injection
+	
+}
