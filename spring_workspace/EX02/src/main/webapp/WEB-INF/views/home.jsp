@@ -5,6 +5,8 @@
 	<title>Home</title>
 </head>
 <body>
-<a href="/board/list">Board</a>
+<h1>
+	<a href="/board/list">Go to Board List</a>  
+</h1>
 </body>
 </html>
