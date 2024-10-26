@@ -14,33 +14,33 @@ public class HomeController {
     }
 
     @RequestMapping("test1")
-    public String test1(HttpServeletRequest httpServletRequest , Model model) {
-        String id = httpServletRequest.getParameter("id");
-        String name= httpServletRequest.getParameter("name");
-
-        model.addAttribute("id", id);
-        model.addAttribute("name", name);
-        return "test1";
+    public String test1(/*HttpServeletRequest httpServletRequest ,*/ Model model) {
+//        String id = httpServletRequest.getParameter("id");
+//        String name= httpServletRequest.getParameter("name");
+//
+//        model.addAttribute("id", id);
+//        model.addAttribute("name", name);
+        return "test";
     }
 
     @RequestMapping("test2")
     public String test2(@RequestParam("id") String id, @RequestParam("name") String name,Model model){
-        model.addAttribute("id", id);
-        model.addAttribute("name", name);
+//        model.addAttribute("id", id);
+//        model.addAttribute("name", name);
         return "test2";
 
     }
 
-    @RequestMapping("test3")
-    public String test3(Member member, Model model){ // Member DTO 가 존재 할 때 ,
-        return "test3";
-    }
-
+//    @RequestMapping("test3")
+//    public String test3(Member member, Model model){ // Member DTO 가 존재 할 때 ,
+//        return "test3";
+//    }
+//
     // path 에 param을 직접박기
     @RequestMapping("test4/{studentId}/{name}")
     public String test4(@PathVariable String studentId, @PathVariable String name, Model model){
-        model.addAttribute("id" , studentId);
-        model.addAttribute("name", name);
+//        model.addAttribute("id" , studentId);
+//        model.addAttribute("name", name);
         return "test4";
     }
 
