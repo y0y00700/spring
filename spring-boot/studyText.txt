@@ -1,0 +1,23 @@
+ - Spring Boot Settings 
+ 
+ -1. DataBase 
+1. jdbc 라이브러리를 추가할 때에는, application.properties 에 dataSource 드라이버 및 url 경로 , id / pw 를 설정해야 함.
+   (DataBase Connection Pool 에 필요한 정보) 
+
+2. jdbc 에 대한 jar 파일경로를 local 혹은 리눅스 환경 변수에 잡아두어야 함. 
+
+
+ -2. Lombok 
+1. lombok 은 Data Transfer Object 나 Spring 내부에서 사용하는 객체들의 getter / setter / toHash 등의 메서드를 Annotation 으로 지원함. 
+2. lombok에 대한 셋팅은 찾아 볼 것. (IDE 별 설정 방식이 다를 수 있음. Eclipse 기반 STS 는 cmd를 열어서 실행했던 것으로 기억/ Intelli는 찾아봐야 함) 
+  lombok Annotation (@Data , @Getter , @Setter 등등...) 
+
+ -3. myBatis 
+1. 프로젝스 생성 때, myBatis를 build.gradle 에 추가될 수 있도록 생성 할 것. (lib을 수동으로 추가해야 할 경우 googling 할 것)
+2. application.properties에 myBatis Prefix Setting 을 추가할 것   ex)/**/**/**.xml 
+
+  myBatis는Spring 에서 DataSource 단 요청 Query 를 jdbcTemplate 형태로 요청하는 것이 아닌xml 형태로 작성된 Query 를Data Access Object 형태와 매핑 시켜준다.
+  디자인 패턴은 다음과 같다.
+  * dao.java   -> Interface (@mapper Annotation 표기할 것) : 인터페이스 형태로 메소드를 생성
+  * dao.mapper.xml -> 동일 이름의 xml 파일에 dao에 선언된 메소드 이름을 xml Tag 에 매핑시킨다. 
+  * dto.java   -> lombok  
