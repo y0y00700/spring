@@ -21,3 +21,9 @@
   * dao.java   -> Interface (@mapper Annotation 표기할 것) : 인터페이스 형태로 메소드를 생성
   * dao.mapper.xml -> 동일 이름의 xml 파일에 dao에 선언된 메소드 이름을 xml Tag 에 매핑시킨다. 
   * dto.java   -> lombok  
+
+
+  - Spring Transaction 
+    해당 사항 추후 업데이트
+  - Spring Security 
+  해당 사항에 대한 추후  정리 후 다시 업데이트 
