@@ -1,0 +1,10 @@
+예제 만들기
+(Pure Java)
+IntelliJ , Java (Version 11 up)
+
+Pure Java Proejct 
+Spring Boot Starter , 
+- 형상 관리 Gradle 
+- Java Proejct 
+- Dependency 아무것도 추가하지 않는다. 
+- jar 

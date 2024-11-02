@@ -1,0 +1,70 @@
+Spring Boot Basic 
+
+과거 EJB 컨테이너 대체 
+POJO : Plane Old Java Object
+EJB Entity Bean 기술 대체 > Hibernate > JPA
+Java 진영 ORM : Hibernate , JPA
+
+Spring DI Container
+Spring Framework
+
+핵심 Concept
+스프링은 자바 언어 기반의 프레임워크
+자바 언어의 가장 큰 특징 - 객체 지향 언어
+스프링은 객체 지향 언어가 가진 강력한 특징을 살려내는 프레임워크
+
+객체 지향 프로그램
+프로그램을 객체들의 모임으로 파악
+각 객체는 메세지를 주고받고 데이터를 처리할 수 있다.
+
+유연하고, 변경이 용이 > 블럭 조립, 부품을 갈아 끼우듯이..
+다형성(Polymorphism)
+
+역할과 구현을 분리
+
+역할 = Interface 
+구현 = Class (.java/.class)
+
+객체 설계시 역할(인터페이스)을 먼저 부여하고, 
+그 역할을 수행하는 구현 객체 만들기
+
+
+자바의 다형성
+Overriding
+
+다형성의 본질
+인터페이스를 구현한 객체 인스턴스를 실행 시점에 유연하게 변경할 수 있다.
+
+스프링과 객체 지향
+다형성이 가장 중요
+스프링은 다형성을 극대화해서 이용할 수 있게 도와준다.
+스프링의 IoC , DI 는 다형성을 활용해서 역할과 구현을 편리하게
+다룰 수 있도록 지원한다.
+
+좋은 객체 지향 설계의 5가지 원칙(SOLID)
+
+SRP :  단일 책임 원칙 (Single Responsibility Principle)
+ 한 클래스는 하나의 책임만 가져야 한다.
+ 중요한 기준은 변경이다. 
+ 변경이 있을 때 파급 효과가 적으면 단일 책임 원칙을 잘 따른 것.
+
+OCP : 개방- 폐쇄 원칙 (Open/Closed Principle)
+ 소프트웨어 요소는 확장에는 열려 있으나 변경에는 닫혀 있어야 한다.
+ 
+LSP : 리스코프 치환 원칙(Liskov Substitution Principle) 
+ 프로그램의 객체는 프로그램의 정확성을 깨뜨리지 않으면서 하위 타입
+ 의 인스턴스로 바꿀 수 있어야 한다.
+
+ISP : 인터페이스 분리 원칙(Interface Segregation Principle)
+ 특정 클라이언트를 위한 인터페이스 여러 개가 범용 인터페이스 하나보다 낫다.
+
+DIP : 의존관계 역전 원칙  (Dependency Inversion Principle)
+ 프로그래머는 추상화에 의존해야하고, 구체화에 의존하면 안된다.
+ 쉽게 말해서 구현체(Class)에 의존하지 않고, 인터페이스(Interface)에 의존해야 함.
+
+
+객체지향 설계와 Spring
+스프링은 아래 기술로 OCP , DIP 를 지원
+DI : Dependency Injection
+DI Container 제공 
+
