@@ -1,0 +1,54 @@
+Import  : ctrl + alt  + o 
+
+Junit Test Case 만들기 : ctrl + alt + T 
+
+전체 클래스 보기 : Shift 두번 
+
+
+
+검색 단축키
+
+- 전체 검색 : Shift 두 번 누르기
+
+- 전체에서 검색 : Ctrl + Shift + F
+
+ 
+
+이동 단축키
+
+해당 코드의 선언부로 이동 : Ctrl + B
+
+해당 코드의 구현부로 이동 : Ctrl+Alt+B
+
+ 
+
+자동완성 단축키
+
+- 기본 자동완성 : Ctrl + Space
+
+- 스마트 자동완성 : Ctrl + Shfit + Space
+
+ 
+
+라인 수정
+
+- 라인 복사 : Ctrl + D
+
+- 라인 삭제 : Ctrl + Y
+
+ 
+
+정렬
+
+- 자동정렬 : Ctrl + Alt + L
+
+ 
+
+생성자, Getter/Setter, toString과 같은 코드 생성
+- Alt + Insert
+
+ 
+
+System.Out.Println 자동완성
+
+- sout 입력하고 자동완성

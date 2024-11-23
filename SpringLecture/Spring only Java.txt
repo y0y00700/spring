@@ -1,0 +1,32 @@
+스프링 핵심 원리 이해2 
+객체 지향 원리 적용
+
+추상(인터페이스) 의존 : DiscountPolicy
+구체 : FixDiscountPolicy , RateDiscountPolicy
+
+OrderServiceImpl 코드 변경 ( Fix - > Rate ) 
+
+OrderServiceImpl 의존 관계 : Impl에 의존 (DIP 위반) 
+(: 추상화에 의존해야 하지만 , Impl 구체클래스에 의존하게됨.)
+
+해결 방안
+해결을 위해 클라이언트인 OrderServiceImpl 대신 누군가
+해당 구현체를 생성/소멸을 관리해 주어야 함.
+
+
+
+
+관심사의 분리
+ex) 
+배우는 본인 역할인 배역 수행에만 집중.
+배역이 바뀐 다른 주인공으로 교체되더라도 배우는 해당 배역 수행만 담당.
+담당 배우를 섭외하고 지정하는 책임을 담당하는 기획자가 별도로 존재 해야 함.
+공연 기획자를 만들고 배우와 공연 기획자의 책임을 분리한다.
+
+AppConfig (공연 기획자)
+: 애플리케이션의 전체 동작 방식을 설정
+
+
+AppConfig Refactoring
+
+AppConfig 는 중복이 있고 한눈에 잘 안보임
