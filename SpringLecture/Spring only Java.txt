@@ -51,3 +51,10 @@ SRP 단일 책임 원칙(Single Responsibility Principle)  : 한 클래스는 �
 DIP 의존 관계 역전 원칙 (Dependency Inversion Principle)
 OCP (Open Close Principle) : 확장에는 열려 있으나 변경에는 닫혀 있어야 함.
 
+@Bean : 스프링 컨테이너에 등록되는 빈 
+@Configuration  : 스프링 설정 정보 Annotation 
+
+ApplicationContext // 스프링 객체를 관리
+
+ac = new AnnotationConfigAppicationContext(Appconfig.class) ;
+

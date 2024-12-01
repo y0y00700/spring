@@ -1,0 +1,20 @@
+스프링 컨테이너 생성
+
+ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+
+스프링 컨테이너는 XML 로도 만들 수 있고, 
+애노테이션 기반의 자바 설정 클래스로 만들 수 있다.
+
+전체 스프링 빈 조회하기
+
+스프링 빈 조회 - 기본
+ 1.ac.getBean(빈이름 , 타입) 
+ 2.ac.getBean(타입) 
+
+조회 대상 없으면 ?  NoSuchBean ... 
+
+
+스프링 빈 조회 - 상속관계
+부모타입으로 조회하면 자식 타입도 함께 조회함
+그래서 모든 자바 객체의 최고 부모인 Object 타입으로 조회하면 모든 스프링 빈을 조회한다.
+
