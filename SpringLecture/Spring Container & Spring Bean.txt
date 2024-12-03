@@ -18,3 +18,27 @@ ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 부모타입으로 조회하면 자식 타입도 함께 조회함
 그래서 모든 자바 객체의 최고 부모인 Object 타입으로 조회하면 모든 스프링 빈을 조회한다.
 
+BeanFactory 와 ApplicationContext
+
+
+BeanFactory 
+  스프링 컨테이너의 최상위 인터페이스
+  스프링 빈을 관리하고 조회하는 역할을 담당한다.
+  getBean() 과 같은 메소드를 제공
+  
+ApplicationContext
+  BeanFactory 기능을 상속 받아서 제공한다.
+  빈을 관리하고 검색하는 기능을 BeanFactory가 제공해준다.
+  애플리케이션을 개발할 때는 빈을 관리하고 조회하는 기능 뿐 아니라 다른 부가기능이 필요하다.
+
+ApplicationContext 가 제공하는 부가기능 
+  MessageSource : 설정에 따른 언어 출력 기능(en , ko 등..) 
+  EnvironmentCapable : 로컬 개발 운영등을 구분해서 처리하는 기능
+  ApplicationEventPublisher : 이벤트를 발행하고 구독하는 모델 지원
+  ResourceLoader : 파일 , 클래스패스 , 외부 등에서 리소스를 편리하게 조회 
+
+요약 
+  ApplicationContext는 BeanFactory 기능을 상속받는다.
+  ApplicationContext는 빈 관리 기능 외 편리한 부가 기능을 제공한다.
+  BeanFactory를 직접 사용할 일은 거의 없다. 부가 기능이 포함된 ApplicationContext를 사용한다.
+  BeanFactory나 ApplicationContext를 스프링 컨테이너라 한다. 
