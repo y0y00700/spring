@@ -42,3 +42,30 @@ ApplicationContext 가 제공하는 부가기능
   ApplicationContext는 빈 관리 기능 외 편리한 부가 기능을 제공한다.
   BeanFactory를 직접 사용할 일은 거의 없다. 부가 기능이 포함된 ApplicationContext를 사용한다.
   BeanFactory나 ApplicationContext를 스프링 컨테이너라 한다. 
+
+XML 로 빈 설정
+ 1.src/main/resources -> appConfig.xml 설정 
+ 2.test 코드 작성하여 해당 appConfig 호출 및 테스트
+
+BeanDefinition
+스프링 컨테이너는 BeanDefinition이라는 추상화가 있다.
+
+BeanDefinition 정보
+**
+ **
+ BeanDefinition
+ `
+ BeanClassName: 생성할 빈의 클래스 명(자바 설정 처럼 팩토리 역할의 빈을 사용하면 없음)
+ factoryBeanName: 팩토리 역할의 빈을 사용할 경우 이름, 예) appConfig
+ factoryMethodName: 빈을 생성할 팩토리 메서드 지정, 예) memberService
+ Scope: 싱글톤(기본값)
+을 생성하`
+ lazyInit: 스프링 컨테이너를 생성할 때 빈을 생성하는 것이 아니라, 실제 빈을 사용할 때 까지 최대한 생성을 지연
+처리 하는지 여부
+InitMethodName: 빈을 생성하고, 의존관계를 적용한 뒤에 호출되는 초기화 메서드 명
+DestroyMethodName: 빈의 생명주기가 끝나서 제거하기 직전에 호출되는 메서드 명
+Constructor arguments, Properties: 의존관계 주입에서 사용한다. (자바 설정 처럼 팩토리 역할의 빈을 사용
+하면 없음)
+
+BeanDefinition을 직접 생성해서 스프링 컨테이너에 등록할 수 있다.
+하지만 실무에서 사용할 일은 거의 없다.
