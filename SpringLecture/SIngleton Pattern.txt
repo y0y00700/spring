@@ -38,6 +38,21 @@ SIngleton 방식의 주의점
 @Configuration과 Singleton
 
 현재 AppConfig.class 에서 new 를 통한 객체를 신규로 생성하는 코드를 담고있다.
+AppConfig 를 보았을 때 , 객체를 계속 생성하게끔 되어있는데 어떻게 싱글톤을 보장할 수 있을까? 
 
-하지만, Singleton의 보장은 @Configuration 과 BiteCode 조작을 통해 
-스프링 프레임의크의 싱글톤을 보장한다.
+@Configuration 과 BiteCode(CGLIB) 조작을 통해  Spring Framework의 싱글톤을 보장한다.
+
+스프링이 CGLIB이라는 바이트 코드 조작 라이브러리를 사용해서 AppConfig 클래스를 상속받은 임의의 다른 클래스를 만들고,
+그 다른 클래스를 스프링 빈으로 등록한 것이다.
+
+그 임의의 다른 클래스가 바로 싱글톤이 보장되도록 해준다.
+
+예상 코드는 PPT 에서 확인.
+
+@Bean 이 붙은 메서드마다 이미 스프링 빈이 존재하면 빈을 반환하고, 
+스프링 빈이 없으면 그 때 생성하여 빈으로 등록하고 반환하는 코드가 동적으로 되어있을 것.
+
+@Configuration 을 사용하지 않고 @Bean 만 사용한다면 ? 
+ 해당 Bean 들을 호출한만큼 new 로 새로운 객체를 생성하게 된다.
+
+결론 : 크게 고민하지 말고, 스프링 설정 정보는 항상 @Configuration 을 사용하도록 하자.

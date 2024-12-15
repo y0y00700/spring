@@ -22,6 +22,7 @@ public class AppConfig {
     }
 
     private static MemberServiceImpl memberService() {
+
         return new MemberServiceImpl(memberRepository());
     }
 }
