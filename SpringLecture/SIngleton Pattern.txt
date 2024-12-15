@@ -32,3 +32,12 @@ SIngleton 방식의 주의점
 특정 클라이언트에 의존적인 필드가 있으면 안된다.
 특정 클라이언트가 값을 변경할 수 있는 필드가 있으면 안된다.
 필드 대신에 자바에서 공유되지 않는 지역변수 파라미터 ThreadLocal 등을 사용해야 한다.
+
+
+
+@Configuration과 Singleton
+
+현재 AppConfig.class 에서 new 를 통한 객체를 신규로 생성하는 코드를 담고있다.
+
+하지만, Singleton의 보장은 @Configuration 과 BiteCode 조작을 통해 
+스프링 프레임의크의 싱글톤을 보장한다.
